@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import WeatherInfo from "./WeatherInfo";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -29,7 +30,7 @@ export default function Weather(props) {
   }
 
   function search() {
-    const apiKey = "2ff29bed3181c3526c35cc5408037f85";
+    const apiKey = "5863935ee9cca4c02ed68203f807c65b";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -37,14 +38,13 @@ export default function Weather(props) {
   if (weatherData.ready) {
     return (
       <div className="container">
-        <form onSubmit={handleSubmit} className="mb-3">
+        <form onSubmit={handleSubmit} className="mt-3 mb-4">
           <div className="row">
             <div className="col-9">
               <input
                 type="search"
                 placeholder="Type a city..."
                 class="form-control"
-                id="city-input"
                 autocomplete="off"
                 onChange={handleCityChange}
               />
@@ -58,7 +58,6 @@ export default function Weather(props) {
             </div>
           </div>
         </form>
-
         <WeatherInfo data={weatherData} />
       </div>
     );

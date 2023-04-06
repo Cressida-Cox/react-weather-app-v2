@@ -6,13 +6,11 @@ import "./App.css";
 
 export default function App() {
   return (
-    <div className="App">
-      <div className="weather-app-wrapper">
-        <div className="weather-app">
-          <Weather defaultCity="London" />
-        </div>
-        <Footer />
+    <div className="weather-app-wrapper">
+      <div className="weather-app">
+        <Weather defaultCity="London" />
       </div>
+      <Footer />
     </div>
   );
 }
