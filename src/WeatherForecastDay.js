@@ -28,11 +28,11 @@ export default function WeatherForecastDay(props) {
       <div className="WeatherForecast-temperatures">
         <span className="WeatherForecast-temperature-max">
           {" "}
-          {maxTemperature()}°{" "}
+          {maxTemperature()}{" "}
         </span>
         <span className="WeatherForecast-temperature-min">
           {" "}
-          {minTemperature()}°{" "}
+          {minTemperature()}{" "}
         </span>
       </div>
     </div>
