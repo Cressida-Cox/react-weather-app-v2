@@ -14,10 +14,3 @@ body {
 .weather-app-wrapper {
   margin: 30px auto;
 }
-
-.weather-app {
-  margin-top: 60px;
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  padding: 20px;
-}
